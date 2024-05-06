@@ -5,8 +5,14 @@ students = []
 # I decided to use a function to make it easier. This function will contain the commands to choose an option.
 def get_option():
     while True:
-        option = input("Choose an option (1: Add a name, 2: See the students list names, 3: Search for a student name, 4: Exit): ")
-        if option in ["1", "2", "3", "4"]:
+        option = input("""Choose an option:
+    1: Add a name 
+    2: See the students list names
+    3: Search for a student name
+    4: Erase student name
+    5: Exit\n """)
+        
+        if option in ["1", "2", "3", "4", "5"]:
             return option
         else:
             print("Invalid input. Please choose a valid option.")
@@ -17,7 +23,8 @@ while True:
     print("1: Add a name")
     print("2: See the students list names")
     print("3: Search for a student name")
-    print("4: Exit")
+    print("4: Erase a student name")
+    print("5: Exit")
 
     # Choice is the name of the variable that contains the function.
     choice = get_option()
@@ -43,6 +50,16 @@ while True:
             print(f"{search_name} is not in the list.")
 
     elif choice == "4":
+        # We declared a variable to delete a name that contains an input that will be filled with a name from the list in order to be erased.
+        deleted_name = input("Insert the student name you want to erase: ")
+        # If-else used to detect if the student name exists or not.
+        if deleted_name in students:
+            students.remove(student_name)
+            print("Student erased!")
+        else:
+            print("An error occurred. Try again.")
+
+    elif choice == "5":
         # Exit the program
         print("Exiting...")
         break
