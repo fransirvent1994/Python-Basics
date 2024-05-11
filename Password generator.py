@@ -6,9 +6,10 @@ import string
 # A function to script how the system will create the password
 def randomPassword():
     # Lower and upper letters and digits are listed with the string method
-    lower = list(string.ascii_lowercase)
-    upper = list(string.ascii_uppercase)
-    digits = list(string.digits)
+    lower = list(string.ascii_lowercase) # Lower/minus characters
+    upper = list(string.ascii_uppercase) # Upper characters
+    digits = list(string.digits) # Special characters and numbers
+    
     # All of them will be added each other
     all = lower + upper + digits
     #Mix them with shuffle
