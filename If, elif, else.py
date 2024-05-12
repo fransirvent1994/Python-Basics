@@ -26,6 +26,6 @@ elif chosen_word == "Sherlock":
 # Else is the last line to make an appointment like "this is it, no more options"
 
 if res == 4:
-    print("This example comes into else, and this is the if part")
+    print("This example comes before else bc if is the first line, and this is the if part")
 else:
     print("This example is an else, and it is the end of the road for it")
