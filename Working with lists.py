@@ -31,4 +31,11 @@ print(my_list) # Now the list is printed without num 4
 my_list.extend([4, 5, 6])
 print(my_list)
 
-print(my_list.sort())
+# with sort the list will be ordered in ascending order, so, I will declare a new list.
+my_new_list = [8,4,2,5,9]
+my_new_list.sort()
+print(my_new_list)
+
+# With pop we can see if we have an element that matches with the value and be erased.
+my_list.pop(2)
+print(my_list)
