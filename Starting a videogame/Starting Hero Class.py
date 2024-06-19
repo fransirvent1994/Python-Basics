@@ -40,4 +40,5 @@ print(player_name.health())
 class Companion(Hero):
     pass
 
+# This way we have a companion which has the same stats as our hero.
 print(Companion.health(self=Companion))
